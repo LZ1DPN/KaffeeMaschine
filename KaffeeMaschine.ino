@@ -13,8 +13,6 @@
 // buttons temp var
 int BTNON = 0;   
 int BTNlaststate = 0;
-int BTNcheck = 0;
-int BTNcheck2 = 0;
 int BTNinc = 0;
 
 // sugar level temp var
@@ -83,8 +81,7 @@ BTNON = digitalRead(SUGARBTN);
          if(BTNinc > 6){
               BTNinc = 1;
             }
-    
-		 BTNlaststate = BTNcheck2;
+ 
  // next will be rewriten if need another way to put sugar    
     switch (BTNinc) {
           case 1:
