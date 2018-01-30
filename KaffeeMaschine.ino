@@ -79,59 +79,59 @@ BTNON = digitalRead(SUGARBTN);
          BTNinc = BTNinc + 1;
          
          if(BTNinc > 6){
-              BTNinc = 1;
+                BTNinc = 1;
             }
  
- // next will be rewriten if need another way to put sugar    
-    switch (BTNinc) {
-          case 1:
-            digitalWrite(LED1, LOW);
-            digitalWrite(LED2, LOW);  
-            digitalWrite(LED3, LOW);  
-            digitalWrite(LED4, LOW);  
-            digitalWrite(LED5, LOW);
-            SUGARtime = 0;              // in seconds !!! if need calculate another time     
-            break;
-          case 2:
-            digitalWrite(LED1, HIGH);
-			SUGARtime = 1;				// in seconds !!! if need calculate another time    
-            break;
-          case 3:
-            digitalWrite(LED1, HIGH);
-            digitalWrite(LED2, HIGH);
-			SUGARtime = 2;				// in seconds !!! if need calculate another time    
-            break;
-          case 4:
-            digitalWrite(LED1, HIGH);
-            digitalWrite(LED2, HIGH);
-            digitalWrite(LED3, HIGH);
-			SUGARtime = 3;				// in seconds !!! if need calculate another time    
-            break;
-          case 5:
-            digitalWrite(LED1, HIGH);
-            digitalWrite(LED2, HIGH);
-            digitalWrite(LED3, HIGH);
-            digitalWrite(LED4, HIGH);
-			SUGARtime = 4;				// in seconds !!! if need calculate another time    
-            break;
-          case 6:
-            digitalWrite(LED1, HIGH);
-            digitalWrite(LED2, HIGH);
-            digitalWrite(LED3, HIGH);
-            digitalWrite(LED4, HIGH);
-            digitalWrite(LED5, HIGH);
-			SUGARtime = 5;				// in seconds !!! if need calculate another time    
-            break;    
-          default:
-            digitalWrite(LED1, HIGH);
-            digitalWrite(LED2, LOW);  
-            digitalWrite(LED3, LOW);  
-            digitalWrite(LED4, LOW);  
-            digitalWrite(LED5, LOW);
-            SUGARtime = 1;              // in seconds !!! if need calculate another time    
-            break;
-        }         
-        delay(150);     
+         // next will be rewriten if need another way to put sugar    
+            switch (BTNinc) {
+                  case 1:
+                    digitalWrite(LED1, LOW);
+                    digitalWrite(LED2, LOW);  
+                    digitalWrite(LED3, LOW);  
+                    digitalWrite(LED4, LOW);  
+                    digitalWrite(LED5, LOW);
+                    SUGARtime = 0;              // in seconds !!! if need calculate another time     
+                    break;
+                  case 2:
+                    digitalWrite(LED1, HIGH);
+              			SUGARtime = 1;				// in seconds !!! if need calculate another time    
+                    break;
+                  case 3:
+                    digitalWrite(LED1, HIGH);
+                    digitalWrite(LED2, HIGH);
+        			      SUGARtime = 2;				// in seconds !!! if need calculate another time    
+                    break;
+                  case 4:
+                    digitalWrite(LED1, HIGH);
+                    digitalWrite(LED2, HIGH);
+                    digitalWrite(LED3, HIGH);
+        			      SUGARtime = 3;				// in seconds !!! if need calculate another time    
+                    break;
+                  case 5:
+                    digitalWrite(LED1, HIGH);
+                    digitalWrite(LED2, HIGH);
+                    digitalWrite(LED3, HIGH);
+                    digitalWrite(LED4, HIGH);
+        			      SUGARtime = 4;				// in seconds !!! if need calculate another time    
+                    break;
+                  case 6:
+                    digitalWrite(LED1, HIGH);
+                    digitalWrite(LED2, HIGH);
+                    digitalWrite(LED3, HIGH);
+                    digitalWrite(LED4, HIGH);
+                    digitalWrite(LED5, HIGH);
+        			      SUGARtime = 5;				// in seconds !!! if need calculate another time    
+                    break;    
+                  default:
+                    digitalWrite(LED1, HIGH);
+                    digitalWrite(LED2, LOW);  
+                    digitalWrite(LED3, LOW);  
+                    digitalWrite(LED4, LOW);  
+                    digitalWrite(LED5, LOW);
+                    SUGARtime = 1;              // in seconds !!! if need calculate another time    
+                    break;
+                }         
+                delay(150);     
     }
 }
 
