@@ -1,13 +1,13 @@
-// KafeMashina, rev 2.0/2018
+// KaffeeMaschine, rev 2.0/2018
 
-#define LED1 (2)
-#define LED2 (3)
-#define LED3 (4)
-#define LED4 (5)
-#define LED5 (6)
-#define SUGARBTN (7)
-#define STARTBTN (8)
-#define STARTDRINK (9)
+#define LED1 (2) // display led for sugar level 
+#define LED2 (3) // display led for sugar level 
+#define LED3 (4) // display led for sugar level 
+#define LED4 (5) // display led for sugar level 
+#define LED5 (6) // display led for sugar level 
+#define SUGARBTN (7) // button for sugar level 
+#define STARTBTN (8) // input +5V <--- 7805 <--- 24V from start make drink button 
+#define STARTDRINK (9) // output +5V to control sugar motor work time
 #define pulseHigh(pin) {digitalWrite(pin, HIGH); digitalWrite(pin, LOW); }
 
 // buttons temp var
@@ -16,9 +16,12 @@ int BTNlaststate = 0;
 int BTNcheck = 0;
 int BTNcheck2 = 0;
 int BTNinc = 0;
-int SUGARtime = 1; // in seconds !!! if need calculate another time
+
+// sugar level temp var
+int SUGARtime = 1; // sugar motor work time in seconds !!! if need calculate another time
 
 void setup() {
+// setup/init all used pinouts
 pinMode(LED1, OUTPUT);
 digitalWrite(LED1, LOW);  
 
@@ -52,14 +55,16 @@ digitalWrite(LED5, LOW);
 SUGARtime = 1;    
 }
 
+//START LOOP
 void loop() {
   checkSUGARBTN();      // check for press button 
   checkSTART();         // check for start to make drink
 }
+//END LOOP
 
-//external functions
+// next are external functions
 
-// START
+// START/END SUGAR
 void checkSTART(){
   BTNON = digitalRead(STARTBTN);
   if(BTNON == HIGH){
@@ -69,7 +74,7 @@ void checkSTART(){
       }
 }
 
-// SUGARBTN
+// SUGAR BUTTON LEVEL
 void checkSUGARBTN(){
 BTNON = digitalRead(SUGARBTN);    
     if(BTNON == LOW){
@@ -133,4 +138,4 @@ BTNON = digitalRead(SUGARBTN);
     }
 }
 
-// EOF
+// EOF - END OF PROGRAMM FILE
