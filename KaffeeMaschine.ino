@@ -94,25 +94,25 @@ BTNON = digitalRead(SUGARBTN);
                     break;
                   case 2:
                     digitalWrite(LED1, HIGH);
-              			SUGARtime = 1;				// in seconds !!! if need calculate another time    
+           			SUGARtime = 1;				// in seconds !!! if need calculate another time    
                     break;
                   case 3:
                     digitalWrite(LED1, HIGH);
                     digitalWrite(LED2, HIGH);
-        			      SUGARtime = 2;				// in seconds !!! if need calculate another time    
+					SUGARtime = 2;				// in seconds !!! if need calculate another time    
                     break;
                   case 4:
                     digitalWrite(LED1, HIGH);
                     digitalWrite(LED2, HIGH);
                     digitalWrite(LED3, HIGH);
-        			      SUGARtime = 3;				// in seconds !!! if need calculate another time    
+        			SUGARtime = 3;				// in seconds !!! if need calculate another time    
                     break;
                   case 5:
                     digitalWrite(LED1, HIGH);
                     digitalWrite(LED2, HIGH);
                     digitalWrite(LED3, HIGH);
                     digitalWrite(LED4, HIGH);
-        			      SUGARtime = 4;				// in seconds !!! if need calculate another time    
+        			SUGARtime = 4;				// in seconds !!! if need calculate another time    
                     break;
                   case 6:
                     digitalWrite(LED1, HIGH);
@@ -120,7 +120,7 @@ BTNON = digitalRead(SUGARBTN);
                     digitalWrite(LED3, HIGH);
                     digitalWrite(LED4, HIGH);
                     digitalWrite(LED5, HIGH);
-        			      SUGARtime = 5;				// in seconds !!! if need calculate another time    
+        			SUGARtime = 5;				// in seconds !!! if need calculate another time    
                     break;    
                   default:
                     digitalWrite(LED1, HIGH);
